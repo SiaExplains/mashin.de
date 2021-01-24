@@ -1,3 +1,3 @@
-var x = 10;
-
-consol.log(x);
+var age = 10;
+// age behatre
+consol.log(age);
