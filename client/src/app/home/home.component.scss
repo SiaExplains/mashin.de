@@ -1,0 +1,78 @@
+@import '../../assets/layout/sass/colors';
+@import '../../assets/layout/sass/mixins';
+
+.home {
+  min-height: calc(100vh - 139px);
+  padding: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-box {
+  width: 380px;
+  background-color: $gray3;
+  @include border-radius(10px);
+  overflow: hidden;
+  .listing-type {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 63px;
+    background-color: $gray4;
+    color: $gray3;
+    span {
+      cursor: pointer;
+      justify-content: center;
+      display: flex;
+      flex: 1;
+    }
+  }
+  .active {
+    background-color: $gray3;
+    color: $green;
+  }
+  .filter-holder {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+
+.options {
+  color: $white;
+  font-size: 22px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .single-option {
+    display: flex;
+    align-items: center;
+    i::before {
+      font-size: 40px;
+    }
+  }
+}
+
+.landing-button {
+  margin-top: 20px;
+  align-self: center;
+}
+
+svg {
+  cursor: pointer;
+  margin-right: 80px;
+}
+
+.secondary-button {
+  align-self: center;
+  margin-top: 12px;
+}
+.link-button {
+  margin-top: 6px;
+}

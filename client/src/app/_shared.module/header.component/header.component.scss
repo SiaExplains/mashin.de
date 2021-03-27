@@ -1,0 +1,27 @@
+@import '../../../assets/layout/sass/colors';
+@import '../../../assets/layout/sass/mixins';
+
+#header {
+  height: 68px;
+  background-color: $black;
+  border-bottom: 4px solid $yellow;
+  display: flex;
+  align-items: center;
+  padding: 0px 67px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  @include box-shadow (0 1px 10px $black);
+
+  .tab {
+    color: $gray;
+    font-size: 16px;
+    line-height: 44px;
+    display: flex;
+    justify-content: space-around;
+    cursor: default;
+    cursor: pointer;
+    width: 100%;
+  }
+}

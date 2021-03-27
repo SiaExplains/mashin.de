@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import './colors';
+
+body {
+  direction: rtl;
+  border-style: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    text-decoration:none;
+    cursor:pointer;
+  }
+}
+
+.input {
+  margin: 4px;
+  height: 32px;
+  @include border-radius(10px);
+  border: 1px solid $gray2;
+  padding: 0px 16px 0px 0px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.al-center {
+  align-items: center;
+}
+
+.jus-center {
+  justify-content: center;
+}
+
+.wi-100 {
+  width: 100%;
+  max-width: 100%;
+}
+.wi-50 {
+  width: 100%;
+  max-width: 100%;
+}

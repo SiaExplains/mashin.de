@@ -1,1 +1,43 @@
-<p>home page</p>
+<div class="home" [style.background-image]="'url(../../../assets/images/'+ imageUrls[i] +')'">
+  <div class="filter-box">
+    <div class="listing-type">
+      <span (click)="setActive(listingTypes[0])" [class.active]="activeType == listingTypes[0]">{{listingTypes[0]}}</span>
+      <span (click)="setActive(listingTypes[1])" [class.active]="activeType == listingTypes[1]">{{listingTypes[1]}}</span>
+    </div>
+    <div class="filter-holder">
+      <input placeholder="انتخاب برند" class="input">
+      <input placeholder="انتخاب مدل" class="input">
+      <input placeholder="انتخاب شکل ماشین" class="input">
+      <div class="flex-row">
+        <div class="flex-row wi-50">
+          <input placeholder="ساخته شده در سال" class="input">
+        </div>
+        <div class="flex-row wi-50">
+          <input placeholder="کیلومتر تا" class="input">
+        </div>
+      </div>
+      <input placeholder="درجه بندی ماهیانه: 60 ماه" class="input">
+      <button type="button" class="secondary-button">دیدن نتایج</button>
+      <button type="button" class="link-button">جستجو با جزییات</button>
+    </div>
+  </div>
+  <div class="flex-row al-center">
+    <div class="options">
+      <div class="single-option">
+        <i class="icon-noun_check_2422615"></i>
+        <span>کیفیت بالا</span>
+      </div>
+      <div class="single-option">
+        <i class="icon-noun_check_2422615"></i>
+        <span>یک سال گارانتی</span>
+      </div>
+      <div class="single-option">
+        <i class="icon-noun_check_2422615"></i>
+        <span>‏14 روز استفاده آزمایشی</span>
+      </div>
+
+      <button type="button" class="landing-button">پیشنهاد ویژه</button>
+    </div>
+    <svg (click)="setBackgroundImage()" xmlns="http://www.w3.org/2000/svg" width="18.241" height="32" viewBox="0 0 18.241 32" class="ng-tns-c119-10"><path _ngcontent-Kilid-Portal-c119="" id="Path_5488" data-name="Path 5488" d="M.656,17.584,14.416,31.343a2.241,2.241,0,0,0,3.169-3.169L5.41,16,17.585,3.826A2.241,2.241,0,1,0,14.415.656L.656,14.416a2.241,2.241,0,0,0,0,3.168Z" fill="rgba(255,255,255,0.7)" class="ng-tns-c119-10"></path></svg>
+  </div>
+</div>

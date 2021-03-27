@@ -1,0 +1,114 @@
+@mixin fourK {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop-l {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1224px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-s {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+
+@mixin hoverable-device {
+  @media(hover: hover) and (pointer: fine){
+    @content;
+  }
+}
+
+//wi-4k
+@include fourK {
+  .container {
+    width: 1440px;
+  }
+}
+
+//wi-xxl
+@include laptop-l {
+  .container {
+    width: 1220px;
+  }
+}
+
+//wi-xl
+@include laptop {
+  .container {
+    width: 980px;
+  }
+}
+
+//wi-l
+@include tablet {
+  .container {
+    width: 750px;
+  }
+}
+
+//wi-m
+@include tablet-s {
+  .container {
+    width: 95%;
+  }
+}
+
+//wi-ml
+@include mobile-l {
+
+  .container {
+    width: 95%;
+  }
+}
+
+//wi-mm
+@include mobile-m {
+  .container {
+    width: 95%;
+  }
+}
+
+//wi-s
+@include mobile {
+  .hidden-s {
+    display: none !important;
+  }
+  .container {
+    width: 95%;
+  }
+}

@@ -1,0 +1,182 @@
+@import '../sass/_general';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "IRANSans",sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $white;
+  input{
+    font-family: "IRANSans";
+  }
+  button{
+    font-family: "IRANSans";
+  }
+  textarea {
+    font-family: "IRANSans";
+  }
+}
+
+
+
+$columnNumber: 20;
+$secondaryColumnNumber: 3;
+
+@mixin columnWidthGenerator($ind, $num) {
+  width: 1% * $ind*(100/$num);
+  min-width: 1% * $ind*(100/$num);
+}
+
+@mixin rowHeightGenerator($ind, $num) {
+  height: 1% * $ind*(100/$num);
+  min-height: 1% * $ind*(100/$num);
+}
+
+
+@for $i from 1 through $columnNumber {
+.wi-#{$i*floor(100/$columnNumber)} {
+  @include columnWidthGenerator($i, $columnNumber)
+}
+}
+
+@for $i from 1 through $secondaryColumnNumber {
+  .wi-#{$i*floor(100/$secondaryColumnNumber)} {
+    @include columnWidthGenerator($i, $secondaryColumnNumber)
+  }
+}
+
+@for $i from 1 through $columnNumber {
+  .hi-#{$i*floor(100/$columnNumber)} {
+    @include rowHeightGenerator($i, $columnNumber)
+  }
+}
+@for $i from 1 through $secondaryColumnNumber {
+  .hi-#{$i*floor(100/$secondaryColumnNumber)} {
+    @include rowHeightGenerator($i, $secondaryColumnNumber)
+  }
+}
+
+//wi-4k
+@include fourK {
+  @for $i from 1 through $columnNumber {
+    .wi-4k-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .wi-4k-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .hi-4k-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .hi-4k-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+
+//wi-xxl
+@include laptop-l{
+  @for $i from 1 through $columnNumber {
+    .wi-xxl-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .wi-xxl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+
+
+  @for $i from 1 through $columnNumber {
+    .hi-xxl-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .hi-xxl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+
+//wi-xl
+@include laptop{
+  @for $i from 1 through $columnNumber {
+    .wi-xl-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .wi-xl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+  @for $i from 1 through $columnNumber {
+    .hi-xl-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .hi-xl-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+
+//wi-l
+@include tablet {
+  @for $i from 1 through $columnNumber {
+    .wi-l-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .wi-l-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+  @for $i from 1 through $columnNumber {
+    .hi-l-#{$i*floor(100/$columnNumber)} {
+      @include rowHeightGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .hi-l-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include rowHeightGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}
+
+//wi-m
+@include tablet-s {
+  @for $i from 1 through $columnNumber {
+    .wi-m-#{$i*floor(100/$columnNumber)} {
+      @include columnWidthGenerator($i, $columnNumber)
+    }
+  }
+  @for $i from 1 through $secondaryColumnNumber {
+    .wi-m-#{$i*floor(100/$secondaryColumnNumber)} {
+      @include columnWidthGenerator($i, $secondaryColumnNumber)
+    }
+  }
+}

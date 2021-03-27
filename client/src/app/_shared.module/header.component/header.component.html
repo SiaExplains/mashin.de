@@ -1,3 +1,6 @@
-<header>
-<div>header</div>
+<header id="header">
+  <div class="tab">
+    <a *ngFor="let tab of headerTabs" [routerLink]="['/' + tab.url]">{{tab.title}}</a>
+  </div>
+  <button type="button" class="landing-button" (click)="createListing()">ثبت آگهی</button>
 </header>
