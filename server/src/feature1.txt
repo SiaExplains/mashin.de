@@ -1,5 +1,6 @@
+
 just for test git rebase ability!!!!!
-No!
-No!
-No!
+this is new change from f1
+I also added this one from f1
 And new one from f2
+Apply new change from f1
